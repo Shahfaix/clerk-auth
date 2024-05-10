@@ -8,10 +8,12 @@ interface HeaderProps{
 
 const header = ({user}:HeaderProps) => {
   return (
-    <div className='bg-slate-500  h-[100px ] text-white shadow-lg justify-between items-center '>
+    <div className=' flex bg-slate-500  h-[100px] text-white shadow-lg justify-between items-center px-2 '>
       <div>
-        <h1>logo</h1>
+        <h1 className='text-4xl'>logo</h1>
       </div>
+
+      <div className='flex flex-row gap-2'>
       <h1>
         <Link href = "">
         {user?.username}
@@ -20,7 +22,7 @@ const header = ({user}:HeaderProps) => {
       
       </h1>
       <UserButton afterSignOutUrl='/'/>
-
+      </div>
     </div>
   )
 }
